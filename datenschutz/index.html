@@ -3,14 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#14111f">
 <title>Datenschutz – Klamauk</title>
 <meta name="description" content="Datenschutz der App Klamauk.">
+<meta property="og:title" content="Datenschutz – Klamauk">
+<meta property="og:description" content="Datenschutz der App Klamauk.">
+<meta property="og:image" content="https://klamauk.app/icon.png">
 <link rel="icon" href="/favicon.png">
 <link rel="apple-touch-icon" href="/icon.png">
 <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-<header class="top"><a class="brand" href="/"><img src="/icon.png" alt="" width="36" height="36"><span>Klamauk</span></a></header>
+<body class="sub">
+<div class="glow" aria-hidden="true"><i class="g1"></i><i class="g2"></i><i class="g3"></i></div>
+<header class="top"><a class="brand" href="/"><img src="/icon.png" alt="" width="36" height="36"><span class="wm small" aria-label="Klamauk"><span aria-hidden="true" style="color:#ffd93b;--r:-4deg;--d:0s">K</span><span aria-hidden="true" style="color:#ff4f8b;--r:4deg;--d:0.06s">l</span><span aria-hidden="true" style="color:#5ad1ff;--r:-4deg;--d:0.12s">a</span><span aria-hidden="true" style="color:#3ddc97;--r:4deg;--d:0.18s">m</span><span aria-hidden="true" style="color:#ff8a3c;--r:-4deg;--d:0.24s">a</span><span aria-hidden="true" style="color:#b28bff;--r:4deg;--d:0.3s">u</span><span aria-hidden="true" style="color:#ffd93b;--r:-4deg;--d:0.36s">k</span></span></a></header>
 <main>
 <article class="doc"><h1>Datenschutz</h1>
 <section><h2>Das Wichtigste in Kürze</h2>
@@ -56,5 +61,10 @@
 <nav><a href="/">Start</a><a href="/support/">Support</a><a href="/datenschutz/">Datenschutz</a><a href="/nutzungsbedingungen/">Nutzungsbedingungen</a><a href="/impressum/">Impressum</a><a href="/lizenzen/">Lizenzen</a></nav>
 <p>© 2026 Klamauk · <a href="mailto:hallo@klamauk.app">hallo@klamauk.app</a></p>
 </footer>
+<script>
+document.documentElement.classList.add('js');
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
 </body>
 </html>
